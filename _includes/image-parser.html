@@ -1,0 +1,15 @@
+{% capture directory %}
+    {% assign path = "uploads/" 
+    	| append: page.path 
+    		| split: '/' 
+    		| last 
+    		| split: '.' 
+    		| first %}
+    {% for image in site.static_files %}
+        {% if image.path contains path %}
+        	{{ image.path }}/
+        {% endif %}
+    {% endfor %}
+{% endcapture %}
+
+{% assign directories = directory | split: ' ' %}
