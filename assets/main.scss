@@ -1,0 +1,62 @@
+---
+# Only the main Sass file needs front matter (the dashes are enough)
+---
+
+@import "minima";
+
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&display=swap');
+
+@font-face { 
+  font-family: "kelsonSans"; 
+  src: url("./KelsonSans-Regular.ttf.woff"); 
+}
+
+.post-content {
+    color: #595959;
+    font-family: 'Ubuntu', sans-serif;
+    font-weight: 300;
+    font-style: normal;
+    font-size: 15px;
+    letter-spacing: 0.15px;
+    line-height: 24px;
+}
+
+.post-content h3 {
+    color: #404040;
+    font-family: kelsonSans;
+    font-size: 12px;
+    line-height: 18px;
+    text-transform: uppercase;
+}
+
+.post-content p {
+    margin-bottom: 15px;
+}
+
+.post-title {
+    color: #444;
+    font-family: kelsonSans;
+    font-size: 45px;
+}
+
+.nav_bar_item {
+    color: #999 !important;
+    text-decoration: none !important;
+    font-family: kelsonSans; 
+    font-size: 18px; 
+    letter-spacing: 2.1px;
+    padding-left: 15px !important;
+    padding-right: 15px !important;
+}
+
+a.nav_bar_item:hover {
+    color: #EDA643 !important;
+}
+
+@media only screen and (max-width: 767px) {
+    .content { width: 100vw; }
+}
+
+@media only screen and (min-width: 768px) {
+    .content { width: 92vw; }
+}

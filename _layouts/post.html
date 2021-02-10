@@ -1,0 +1,60 @@
+---
+layout: default
+---
+
+<article>
+    <div class="container-fluid content">
+        <div class="row">
+            {%- include carousel.html height="80vh" -%}
+        </div>
+
+        <div class="row" style="padding-top: 80px">
+            <header>
+                <h1 class="post-title" itemprop="name headline">{{ page.title | escape }}</h1>
+            </header>
+        </div>
+
+        <div class="row">
+            <div class="col-lg-9">
+                <blockquote class="post-content">
+                    {{ content }}
+                </blockquote>
+            </div>
+            
+            <div class="col-lg-3 post-content" itemprop="projectInformation" style="padding-left: 35px">
+                {% if page.location %}
+                    <h3>Location:</h3>
+                    <p>{{ page.location }}</p>
+                {% endif %}
+                {% if page.site_area %}
+                    <h3>Site Area:</h3>
+                    <p>{{ page.site_area }}</p>
+                {% endif %}
+                {% if page.year %}
+                    <h3>Year:</h3>
+                    <p>{{ page.year }}</p>
+                {% endif %}
+                {% if page.award %}
+                    <h3>Award:</h3>
+                    <p>{{ page.award }}</p>
+                {% endif %}
+            </div>
+        </div>
+        <div class="row post-content justify-content-between">
+            {% if page.previous.url %}
+                <div class="col">
+                    <a href="{{ page.previous.url }}" style="text-align: left; text-decoration: none; color: #595959">
+                        &ShortLeftArrow; Previous
+                    </a>
+                </div>
+            {% endif %}
+            {% if page.next.url %}
+                <div class="col" style="text-align: right">
+                    <a href="{{ page.next.url }}" style="text-align: right; text-decoration: none; color: #595959">
+                        Next &ShortRightArrow;
+                    </a>
+                </div>
+            {% endif %}
+        </div>
+    </div>
+</article>
