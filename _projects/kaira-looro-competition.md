@@ -4,6 +4,7 @@ title: "Kaira Looro Competition"
 category: Oversea
 location: Sedhiou, Senegal, Africa
 site_area: 10,200 sf
+year: 2019
 award: 2019 Kaira Looro Finalist
 ---
 
