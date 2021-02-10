@@ -7,7 +7,7 @@
     		| first %}
     {% for image in site.static_files %}
         {% if image.path contains path %}
-        	{{ image.path }}/
+        	{{ image.path }}
         {% endif %}
     {% endfor %}
 {% endcapture %}
