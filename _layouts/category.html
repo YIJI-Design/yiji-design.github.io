@@ -1,0 +1,24 @@
+---
+layout: default
+---
+    
+<div class="container-fluid" style="width: 92vw">
+	<div class="row">
+		<div class="col-2">
+		</div>
+		<div class="col-10">
+            <div class="row" style="margin-top: 10px">
+                <div class="col">
+                    <h3>{{ page.tag }}</h3>
+                </div>
+            </div>
+            <div class="row row-cols-1 row-cols-lg-3">
+                {% for project in site.projects %}
+                    {% if project.category == page.tag %}
+                        {%- include project-card.html -%}
+                    {% endif %}
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+</div>

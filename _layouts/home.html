@@ -2,23 +2,28 @@
 layout: default
 ---
 
-<div class="home">
-  {%- if page.title -%}
+{%- if page.title -%}
     <h1 class="page-heading">{{ page.title }}</h1>
-  {%- endif -%}
+{%- endif -%}
 
-  {{ content }}
+{{ content }}
 
 {% assign categories =  site.projects | map: 'category' | join: ','  | split: ',' | uniq %}
-{% for category in categories %}
-  <h3>{{ category }}</h3>
-  <ul>
-  {% for project in site.projects %}
-    {% if project.category contains category %}
-    <li><a href="{{ site.baseurl }}{{ project.url }}">{{ project.title }}</a></li>
-    {% endif %}
-  {% endfor %}
-  </ul>
-{% endfor %}
-    
+
+<div class="container-fluid" style="width: 92vw">
+
+    {% for category in categories %}
+        <div class="row" style="margin-top: 10px">
+            <div class ="col">
+                <h3>{{ category }}</h3>
+            </div>
+        </div>
+        <div class="row row-cols-1 row-cols-lg-3">
+            {% for project in site.projects %}
+                {% if project.category == category %}
+                    {%- include project-card.html -%}
+                {% endif %}
+            {% endfor %}
+        </div>
+    {% endfor %}
 </div>

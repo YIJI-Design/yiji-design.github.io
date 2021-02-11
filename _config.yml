@@ -58,3 +58,5 @@ collections:
   projects:
     output: true
     sort_by: year
+  categories:
+    output: true

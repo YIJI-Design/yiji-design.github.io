@@ -1,0 +1,32 @@
+<div class="col">
+    <a href="{{ site.baseurl }}{{ project.url }}">
+        <div class="card">
+            {% capture directory %}
+                {% assign path = "uploads/" 
+                    | append: project.path 
+                        | split: '/' 
+                        | last 
+                        | split: '.' 
+                        | first %}
+                {% for image in site.static_files %}
+                    {% if image.path contains path %}
+                        {{ image.path }}
+                    {% endif %}
+                {% endfor %}
+            {% endcapture %}
+            <img src="{{ site.baseurl}}{{ 
+                directory 
+                    | split: ' ' 
+                    | first 
+                }}" class="card-img-top" style="height: 300px; object-fit: cover;">
+            <div class="card-body">
+                <h5 class="card-title">{{ project.title }}</h5>
+                <p class="card-text">
+                    <small class="text-muted">
+                        {{ project.category }}
+                    </small>
+                </p>
+            </div>
+        </div>
+    </a>
+</div>
