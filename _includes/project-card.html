@@ -18,7 +18,7 @@
                 directory 
                     | split: ' ' 
                     | first 
-                }}" class="card-img-top" style="height: 300px; object-fit: cover;">
+                }}" class="card-img-top" style="height: {{ include.card-height }}; object-fit: cover;">
             <div class="card-body">
                 <h5 class="card-title">{{ project.title }}</h5>
                 <p class="card-text">

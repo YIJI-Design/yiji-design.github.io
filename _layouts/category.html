@@ -8,7 +8,7 @@ layout: default
 		</div>
 		<div class="col-10">
 			{% for tag in page.tags %}
-                <div class="row" style="margin-top: 10px">
+                <div class="row" style="margin-top: 20px">
                     <div class="col">
                         <h3>{{ tag }}</h3>
                     </div>
@@ -16,7 +16,7 @@ layout: default
                 <div class="row row-cols-1 row-cols-lg-3">
                     {% for project in site.projects %}
                         {% if project.category == tag %}
-                            {%- include project-card.html -%}
+                            {%- include project-card.html card-height = '200px' -%}
                         {% endif %}
                     {% endfor %}
                 </div>
