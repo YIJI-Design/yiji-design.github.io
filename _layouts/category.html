@@ -7,18 +7,20 @@ layout: default
 		<div class="col-2">
 		</div>
 		<div class="col-10">
-            <div class="row" style="margin-top: 10px">
-                <div class="col">
-                    <h3>{{ page.tag }}</h3>
+			{% for tag in page.tags %}
+                <div class="row" style="margin-top: 10px">
+                    <div class="col">
+                        <h3>{{ tag }}</h3>
+                    </div>
                 </div>
-            </div>
-            <div class="row row-cols-1 row-cols-lg-3">
-                {% for project in site.projects %}
-                    {% if project.category == page.tag %}
-                        {%- include project-card.html -%}
-                    {% endif %}
-                {% endfor %}
-            </div>
+                <div class="row row-cols-1 row-cols-lg-3">
+                    {% for project in site.projects %}
+                        {% if project.category == tag %}
+                            {%- include project-card.html -%}
+                        {% endif %}
+                    {% endfor %}
+                </div>
+            {% endfor %}
         </div>
     </div>
 </div>
