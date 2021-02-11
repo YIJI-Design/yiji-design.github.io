@@ -56,18 +56,12 @@ a.nav_bar_item:hover {
     color: #EDA643 !important;
 }
 
-.card-title {
-    color: #404040 !important;
-    font-family: Ubuntu !important;
-    font-size: 20px !important;
-    margin-bottom: 2px !important;
-}
-
-.card-title p {
-    color: #404040 !important;
-    font-family: Ubuntu !important;
-    font-size: 20px !important;
-    margin-bottom: 2px !important;
+.card_title {
+    text-decoration: none !important;
+    color: #404040;
+    font-family: Ubuntu;
+    font-size: 20px;
+    margin-bottom: 2px;
 }
 
 .card {

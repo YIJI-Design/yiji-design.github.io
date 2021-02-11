@@ -13,8 +13,8 @@ layout: default
                     <div class="col">
                         {% for category in site.categories %}
                             {% if category.tag == tag %}
-                                <a href="{{ site.paht }}/{{ category.path | remove_first: '_' | remove: 'md' | append: 'html' }}" >
-                                    <h3 class="card-title" style="font-size: 30px; margin-bottom: 15px">{{ tag }}</h3>
+                                <a href="{{ site.paht }}/{{ category.path | remove_first: '_' | remove: 'md' | append: 'html' }}" style="text-decoration: none;">
+                                    <h3 class="card_title" style="font-size: 30px; margin-bottom: 15px">{{ tag }}</h3>
                                 </a>
                             {% endif %}
                         {% endfor %}
