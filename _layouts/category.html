@@ -1,22 +1,29 @@
 ---
 layout: default
 ---
-    
+
 <div class="container-fluid" style="width: 92vw">
 	<div class="row">
-		<div class="col-2">
+		<div class="col-md-2" style="margin-top: 1.4rem">
+            {%- include project-categories.html -%}
 		</div>
-		<div class="col-10">
+		<div class="col-md-10">
 			{% for tag in page.tags %}
                 <div class="row" style="margin-top: 20px">
                     <div class="col">
-                        <h3>{{ tag }}</h3>
+                        {% for category in site.categories %}
+                            {% if category.tag == tag %}
+                                <a href="{{ site.paht }}/{{ category.path | remove_first: '_' | remove: 'md' | append: 'html' }}" >
+                                    <h3 class="card-title" style="font-size: 30px; margin-bottom: 15px">{{ tag }}</h3>
+                                </a>
+                            {% endif %}
+                        {% endfor %}
                     </div>
                 </div>
-                <div class="row row-cols-1 row-cols-lg-3">
+                <div class="row row-cols-1 row-cols-lg-2 g-4">
                     {% for project in site.projects %}
                         {% if project.category == tag %}
-                            {%- include project-card.html card-height = '200px' -%}
+                            {%- include project-card.html card-height = '20rem' -%}
                         {% endif %}
                     {% endfor %}
                 </div>
