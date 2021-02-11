@@ -1,12 +1,12 @@
 <div class="col">
     <a href="{{ site.baseurl }}{{ project.url }}" style="text-decoration: none;">
-        <div class="card" style="border-width: 0px">
+        <div class="card" style="border-width: 0px; border-radius: 1.5vh;">
             {% capture directory %}
-                {% assign path = "uploads/" 
-                    | append: project.path 
-                        | split: '/' 
-                        | last 
-                        | split: '.' 
+                {% assign path = "uploads/"
+                    | append: project.path
+                        | split: '/'
+                        | last
+                        | split: '.'
                         | first %}
                 {% for image in site.static_files %}
                     {% if image.path contains path %}
@@ -14,11 +14,11 @@
                     {% endif %}
                 {% endfor %}
             {% endcapture %}
-            <img src="{{ site.baseurl}}{{ 
-                directory 
-                    | split: ' ' 
-                    | first 
-                }}" class="card-img-top" style="height: {{ include.card-height }}; object-fit: cover; border-radius: calc(.25rem - 1px);">
+            <img src="{{ site.baseurl}}{{
+                directory
+                    | split: ' '
+                    | first
+                }}" class="card-img-top" style="height: {{ include.card-height }}; object-fit: cover; border-radius: 1.2vh;">
             <div class="card-body">
                 <p class="card_title">{{ project.title }}</p>
                 <p class="card-text post-content">
