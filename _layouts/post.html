@@ -5,6 +5,7 @@ layout: default
 <article>
     <div class="container-fluid content">
         <div class="row">
+            {%- include image-parser.html -%}
             {%- include carousel.html height="80vh" -%}
         </div>
 
@@ -20,7 +21,7 @@ layout: default
                     {{ content }}
                 </blockquote>
             </div>
-            
+
             <div class="col-lg-3 post-content" itemprop="projectInformation" style="padding-left: 35px">
                 {% if page.location %}
                     <h3>Location:</h3>
