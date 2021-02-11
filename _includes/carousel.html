@@ -15,7 +15,17 @@
             	active
             {% endif %}
             ">
+                {% if image_link %}
+                    {% if image_link[forloop.index0] %}
+                        <a href={{ image_link[forloop.index0] }}>
+                    {% endif %}
+                {% endif %}
             	<img class="d-block w-100" src="{{ site.url }}{{ item }}">
+                {% if image_link %}
+                    {% if image_link[forloop.index0] %}
+                        </a>
+                    {% endif %}
+                {% endif %}
             </div>
         {% endfor %}
     </div>
