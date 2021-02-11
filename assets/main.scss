@@ -59,30 +59,30 @@ a.nav_bar_item:hover {
 }
 
 .card-title {
-    color: #404040;
-    font-family: Ubuntu;
-    font-size: 20px;
-    margin-bottom: 2px
+    color: #404040 !important;
+    font-family: Ubuntu !important;
+    font-size: 20px !important;
+    margin-bottom: 2px !important;
 }
 
 .card {
-    background-color: #FEFDFD;
-    transition: .3s;
+    background-color: #FEFDFD !important;
+    transition: .3s !important;
 }
 .card:hover {
-    background-color: #FFF5E6;
-    transition: .7s;
+    background-color: #FFF5E6 !important;
+    transition: .7s !important;
 }
 
 a.btn {
-    font-family: Ubuntu;
-    text-align: left;
-    color: black;
-    text-decoration: none;
+    font-family: Ubuntu !important;
+    text-align: left !important;
+    color: black !important;
+    text-decoration: none !important;
 }
 
 a.btn:hover {
-    color: gray;
+    color: gray !important;
 }
 
 @media only screen and (max-width: 767px) {
