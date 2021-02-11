@@ -2,8 +2,6 @@
 # Only the main Sass file needs front matter (the dashes are enough)
 ---
 
-@import "minima";
-
 @import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&display=swap');
 
 @font-face { 
@@ -59,6 +57,13 @@ a.nav_bar_item:hover {
 }
 
 .card-title {
+    color: #404040 !important;
+    font-family: Ubuntu !important;
+    font-size: 20px !important;
+    margin-bottom: 2px !important;
+}
+
+.card-title p {
     color: #404040 !important;
     font-family: Ubuntu !important;
     font-size: 20px !important;
