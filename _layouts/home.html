@@ -35,9 +35,17 @@ layout: default
 
 {% assign image_link = image_links | split: ' ' %}
 
+{% capture image_captions %}
+    {% for project in site.projects %}
+        {{ project.title }}/
+    {% endfor %}
+{% endcapture %}
+
+{% assign image_caption = image_captions | split: '/' %}
+
 
 <div class="container-fluid" style="padding: 0px;">
     <div class="row">
-        {%- include carousel.html height="80vh" -%}
+        {%- include carousel.html -%}
     </div>
 </div>
