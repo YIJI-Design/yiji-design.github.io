@@ -1,4 +1,4 @@
-<div id="Carousel" class="carousel slide" style="padding: 0px; margin: 0px; width: 100vw; left: 12px" data-bs-ride="carousel">
+<div id="Carousel" class="carousel slide" style="padding: 0px; margin: 0px; width: 100vw;" data-bs-ride="carousel">
     <ol class="carousel-indicators" style="bottom: -10px;">
         {% for item in directories %}
         	<li data-bs-target="#Carousel" data-bs-slide-to="{{ forloop.index0 }}"
@@ -14,13 +14,14 @@
         	{% if forloop.first == true %}
             	active
             {% endif %}
-            ">
+            " style="height: min(80vh, 100vw);">
                 {% if image_link %}
                     {% if image_link[forloop.index0] %}
                         <a href={{ image_link[forloop.index0] }}>
                     {% endif %}
                 {% endif %}
-                	<img class="d-block w-100" src="{{ site.url }}{{ item }}">
+                	<!-- img src="{{ site.url }}{{ item }}" style="position: absolute; object-fit: cover; height: 100%; width: 100%; z-index: -1; filter: blur(20px);" -->
+                    <img src="{{ site.url }}{{ item }}" style="position: absolute; object-fit: contain; height: 100%; width: 100%;">
                     {% if image_caption %}
                         {% if image_caption[forloop.index0] %}
                             <div class="carousel-caption post-content" style="color: white !important; position: absolute; bottom: 0.8rem; left: 5vw; text-align: left; text-shadow: 0 0 1px black, 0 0 3px black, 0 0 5px black;">
@@ -39,7 +40,7 @@
     <a class="carousel-control-prev" href="#Carousel" role="button" data-bs-slide="prev">
         <span style="margin-left: calc(10vw - 100%); text-shadow: 0 0 3px gray, 0 0 5px gray; font-size: 40px"><i class="bi bi-chevron-left"></i></span>
     </a>
-    <a class="carousel-control-next" style="right: 500px" href="#Carousel" role="button" data-bs-slide="next">
+    <a class="carousel-control-next" href="#Carousel" role="button" data-bs-slide="next">
         <span style="margin-right: calc(10vw - 100%); text-shadow: 0 0 3px gray, 0 0 5px gray; font-size: 40px;"><i class="bi bi-chevron-right"></i></span>
     </a>
 </div>
