@@ -1,6 +1,6 @@
 <div class="col">
     <a href="{{ site.baseurl }}{{ project.url }}" style="text-decoration: none;">
-        <div class="card" style="border-width: 0px; border-radius: 1.5vh;">
+        <div class="card" style="border-width: 0px; border-radius: 3vh; ">
             {% capture directory %}
                 {% assign path = "uploads/"
                     | append: project.path
@@ -19,13 +19,16 @@
                     | split: ' '
                     | first
                 }}" class="card-img-top" style="height: {{ include.card-height }}; object-fit: cover; border-radius: 1.2vh;">
-            <div class="card-body">
-                <p class="card_title">{{ project.title }}</p>
-                <p class="card-text post-content">
-                    <small class="text-muted" style="color: #BBB !important">
-                        {{ project.category }}
-                    </small>
-                </p>
+            <div class="card-body container">
+                <div class="row">
+                    <p class="col-8 card_title pb-2 ps-4">{{ project.title }}</p>
+                    <p class="col-4 card-text text-end post-content pe-3 d-none d-md-block">
+                        <small class="text-muted" style="color: #BBB !important;">
+                            {{ project.category }}
+                        </small>
+                    </p>
+                </div>
+
             </div>
         </div>
     </a>
