@@ -9,6 +9,10 @@
   src: url("./KelsonSans-Regular.ttf.woff");
 }
 
+.primary-color {
+    color: #404040;
+}
+
 .post-content {
     color: #595959;
     font-family: 'Ubuntu', sans-serif;
@@ -83,9 +87,6 @@ a.card_title {
 
 a.btn {
     font-family: Ubuntu !important;
-    text-align: left !important;
-    color: black !important;
-    text-decoration: none !important;
 }
 
 a.btn:hover {

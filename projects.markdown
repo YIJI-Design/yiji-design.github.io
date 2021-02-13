@@ -1,31 +1,21 @@
 ---
-layout: category
+layout: default
 title: "Projects"
-tags: ['United States','China','Oversea']
 ---
 
-{%- if page.title -%}
-    <h1 class="page-heading">{{ page.title }}</h1>
-{%- endif -%}
-
-{{ content }}
-
-{% assign categories =  site.projects | map: 'category' | join: ','  | split: ',' | uniq %}
-
 <div class="container-fluid" style="width: 92vw">
-
-    {% for category in categories %}
-        <div class="row" style="margin-top: 10px">
-            <div class ="col">
-                <h3>{{ category }}</h3>
+	<div class="row">
+		<div class="col-lg-2 mt-lg-4">
+            {%- include project-categories.html -%}
+		</div>
+		<div class="col-lg-10 post-content mt-4">
+            <div class="row row-cols-1 row-cols-md-2 row-cols-xxl-3 g-4">
             </div>
         </div>
-        <div class="row row-cols-1 row-cols-lg-3">
             {% for project in site.projects %}
                 {% if project.category == category %}
                     {%- include project-card.html -%}
                 {% endif %}
             {% endfor %}
-        </div>
-    {% endfor %}
+    </div>
 </div>

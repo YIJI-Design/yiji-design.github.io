@@ -4,17 +4,17 @@ layout: default
 
 <div class="container-fluid" style="width: 92vw">
 	<div class="row">
-		<div class="col-lg-2" style="margin-top: 1.4rem">
+		<div class="col-lg-2 mt-lg-4">
             {%- include project-categories.html -%}
 		</div>
-		<div class="col-lg-10">
+		<div class="col-lg-10 post-content">
 			{% for tag in page.tags %}
-                <div class="row" style="margin-top: 20px">
+                <div class="row mt-4 mb-3">
                     <div class="col">
                         {% for category in site.categories %}
                             {% if category.tag == tag %}
-                                <a class="card_title" href="{{ site.paht }}/{{ category.path | remove_first: '_' | remove: 'md' | append: 'html' }}">
-                                    <h3 style="font-size: 30px; margin-bottom: 15px">{{ tag }}</h3>
+                                <a class="fs-3 text-decoration-none primary-color" href="{{ site.paht }}/{{ category.path | remove_first: '_' | remove: 'md' | append: 'html' }}">
+                                    {{ tag }}
                                 </a>
                             {% endif %}
                         {% endfor %}

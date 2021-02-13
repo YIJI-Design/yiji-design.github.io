@@ -1,13 +1,13 @@
 <h1 class="post-title">Our favorite <strong>projects</strong></h1>
-<div class="list-group sticky-lg-top" style="border-width: 0px">
-    <a href="/projects" class="btn"
+<div class="list-group sticky-lg-top border-0">
+    <a href="/projects" class="btn text-center text-md-start"
         {% assign path = site.path | append: "/projects.html" %}
         {% if page.url == path %}
             style="color: gray;"
         {% endif %}
        >All projects</a>
     {% for category in site.categories %}
-        <a href="{{ site.path }}/{{ category.path | remove_first: '_' | remove: 'md' | append: 'html' }}" class="btn"
+        <a href="{{ site.path }}/{{ category.path | remove_first: '_' | remove: 'md' | append: 'html' }}" class="btn text-center text-md-start"
             {% assign path = site.path | append: '/' | append: category.path | remove_first: '_' | remove: 'md' | append: 'html' %}
             {% if page.url == path %}
                 style="color: gray;"

@@ -1,28 +1,27 @@
 ---
 layout: default
 ---
-
-<article>
+<article class="post-content">
     <div class="container-fluid content">
-        <div class="row">
+        <div class="row pb-4">
             {%- include image-parser.html -%}
             {%- include carousel.html height="80vh" -%}
         </div>
 
-        <div class="row" style="padding-top: 80px">
+        <div class="row pt-5">
             <header>
                 <h1 class="post-title" itemprop="name headline">{{ page.title | escape }}</h1>
             </header>
         </div>
 
-        <div class="row">
-            <div class="col-lg-9">
-                <blockquote class="post-content">
+        <div class="row gx-5">
+            <div class="col-xl-10 col-md-9">
+                <blockquote>
                     {{ content }}
                 </blockquote>
             </div>
 
-            <div class="col-lg-3 post-content" itemprop="projectInformation" style="padding-left: 35px">
+            <div class="col-xl-2 col-md-3 ps-lg-5" itemprop="projectInformation">
                 {% if page.location %}
                     <h3>Location:</h3>
                     <p>{{ page.location }}</p>
