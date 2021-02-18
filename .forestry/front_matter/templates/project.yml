@@ -1,0 +1,25 @@
+---
+label: Project
+hide_body: false
+fields:
+- type: text
+  name: layout
+  label: layout
+- type: text
+  name: title
+  label: title
+- type: text
+  name: category
+  label: category
+- type: text
+  name: location
+  label: location
+- type: text
+  name: site_area
+  label: site_area
+- type: number
+  name: year
+  label: year
+- type: text
+  name: award
+  label: award
