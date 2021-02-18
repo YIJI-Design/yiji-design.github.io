@@ -8,7 +8,7 @@ sections:
   path: uploads
   label: Upload
   create: all
-  match: "**/"
+  match: "**/*"
 - type: directory
   path: _projects
   label: Projects
