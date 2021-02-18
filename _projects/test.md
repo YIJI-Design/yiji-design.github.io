@@ -7,7 +7,7 @@ year: 2020
 site_area: ''
 award: ''
 gallery:
-- "/uploads/uploads/s02725.jpg"
+- "/uploads/s02725.jpg"
 
 ---
 Just a test
