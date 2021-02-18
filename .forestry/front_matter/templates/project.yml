@@ -34,10 +34,12 @@ fields:
   label: Detailed Location
 - type: text
   name: site_area
-  label: site_area
+  label: Size of the site
 - type: number
   name: year
-  label: year
+  label: Year
+  config:
+    required: true
 - type: text
   name: award
   label: award
