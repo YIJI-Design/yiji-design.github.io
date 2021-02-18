@@ -32,9 +32,6 @@ fields:
 - type: text
   name: location
   label: Detailed Location
-- type: text
-  name: site_area
-  label: Size of the site
 - name: year
   type: datetime
   label: Year
@@ -46,5 +43,8 @@ fields:
     display_utc: false
     export_format: YYYY
 - type: text
+  name: site_area
+  label: Size of the site
+- type: text
   name: award
-  label: award
+  label: Awards
