@@ -23,17 +23,17 @@ layout: default
             </div>
 
             <div class="col-xl-2 col-md-3 ps-lg-5" itemprop="projectInformation">
-                {% if page.location && page.location.size > 1 %}
+                {% if page.location and page.location != '' %}
                     <h3>Location:</h3>
                     <p>{{ page.location }}</p>
                 {% endif %}
-                {% if page.site_area && page.site_area.size > 1 %}
+                {% if page.site_area and page.site_area != '' %}
                     <h3>Site Area:</h3>
                     <p>{{ page.site_area }}</p>
                 {% endif %}
                 <h3>Year:</h3>
                 <p>{{ page.year }}</p>
-                {% if page.award && page.award.size > 1 %}
+                {% if page.award and page.award != '' %}
                     <h3>Award:</h3>
                     <p>{{ page.award }}</p>
                 {% endif %}
