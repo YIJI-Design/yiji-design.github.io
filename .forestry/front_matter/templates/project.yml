@@ -14,12 +14,24 @@ fields:
   label: Project Name
   config:
     required: true
-- type: text
-  name: category
-  label: category
+- name: category
+  type: select
+  default: []
+  config:
+    required: true
+    options:
+    - United States
+    - China
+    - Oversea
+    source:
+      type: simple
+      section: 
+      file: 
+      path: 
+  label: Category
 - type: text
   name: location
-  label: location
+  label: Detailed Location
 - type: text
   name: site_area
   label: site_area
