@@ -48,3 +48,7 @@ fields:
 - type: text
   name: award
   label: Awards
+- name: gallery
+  type: image_gallery
+  config: {}
+  label: Pictures
