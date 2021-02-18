@@ -6,7 +6,8 @@ location: ''
 year: 2020
 site_area: ''
 award: ''
-gallery: []
+gallery:
+- "/uploads/uploads/s02725.jpg"
 
 ---
 Just a test
