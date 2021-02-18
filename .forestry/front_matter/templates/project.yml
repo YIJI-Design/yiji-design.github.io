@@ -35,11 +35,16 @@ fields:
 - type: text
   name: site_area
   label: Size of the site
-- type: number
-  name: year
+- name: year
+  type: datetime
   label: Year
+  description: ''
   config:
     required: true
+    date_format: YYYY
+    time_format: 
+    display_utc: false
+    export_format: YYYY
 - type: text
   name: award
   label: award
