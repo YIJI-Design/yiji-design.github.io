@@ -54,3 +54,4 @@ fields:
   label: Pictures
 pages:
 - _projects/test.md
+- uploads/a.md
