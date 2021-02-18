@@ -7,7 +7,6 @@ year: 2020
 site_area: ''
 award: ''
 gallery: []
-published: false
 
 ---
 Just a test
