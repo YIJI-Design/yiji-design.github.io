@@ -1,0 +1,13 @@
+<div class="row row-cols-1 row-cols-lg-2 g-5">
+    {% for contact in site.data.contacts %}
+        <div class="col">
+            <div class="card border-0 post-content" style="border-radius: 3vh;">
+                {%- include map.html source = contact.source height = "50vh" -%}
+                <div class="card-body">
+                    <h2>{{ contact.location }}</h2>
+                    {%- include contact-info.html email = contact.email phone = contact.phone -%}
+                </div>
+            </div>
+        </div>
+    {% endfor %}
+</div>
