@@ -1,8 +1,18 @@
-<iframe
-    src="{{ include.source }}"
-    style="border:0;"
-    allowfullscreen=""
-    loading="lazy"
-    class="card-img-top"
-    style="height:{{ include.height }}; border-radius: 3vh;">
-</iframe>
+<div class="card-img-top" id="map{{ include.index }}" style="height:{{ include.height }}; border-radius: 3vh;"></div>
+
+<script>
+    let map{{ include.index }} = new mapkit.Map("map{{ include.index }}");
+    map{{ include.index }}.showsCompass = mapkit.FeatureVisibility.Hidden;
+    map{{ include.index }}.cameraDistance = 25000;
+    map{{ include.index }}.tintColor = "orange";
+    map{{ include.index }}.showItems([
+        new mapkit.MarkerAnnotation(
+            new mapkit.Coordinate({{ include.source.coordinate[0] }}, {{ include.source.coordinate[1] }}),
+            {
+                title: "{{ include.source.location[0] }}",
+                subtitle: "{{ include.source.location[1] }}",
+                color: "orange",
+                glyphImage: {1: "{{ site.url }}/uploads/YIJI_Logo.png"}
+            }),
+    ]);
+</script>

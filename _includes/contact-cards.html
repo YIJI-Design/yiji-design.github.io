@@ -1,10 +1,22 @@
 <div class="row row-cols-1 row-cols-lg-2 g-5">
+    <script>
+        const tokenID = "eyJhbGciOiJFUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6IlZIVFdINVA5RzgifQ.eyJpc3MiOiJNTDRNQzNGNzk4IiwiaWF0IjoxNjM1ODc4NDk2LCJleHAiOjE2NjczNDcyMDB9.PoLUheQ8SjyuZUKes2jdFfa9uHtzo71YJ68EQ5XYOaL3J8RUzs1uJrqwKTMbR-ql4ck1_xUTsX6JJz74UnlZfg";
+
+        mapkit.init({
+            authorizationCallback: function(done) {
+                done(tokenID);
+            }
+        });
+    </script>
     {% for contact in site.data.contacts %}
         <div class="col">
+
             <div class="card border-0 post-content" style="border-radius: 3vh;">
-                {%- include map.html source = contact.source height = "50vh" -%}
+
+                {%- include map.html index = forloop.index source = contact height = "50vh" -%}
+
                 <div class="card-body">
-                    <h2>{{ contact.location }}</h2>
+                    <h2>{{ contact.location[0] }}, {{ contact.location[1] }}</h2>
                     {%- include contact-info.html email = contact.email phone = contact.phone -%}
                 </div>
             </div>
